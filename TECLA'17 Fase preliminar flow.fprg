@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ESEN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-05 06:05:56 "/>
+        <attribute name="created" value="RVNFTjtERVNLVE9QLUsxVDY3NlI7MjAyMy0xMS0wMzsiMDU6MzY6MTMgIjsyNTIw"/>
+        <attribute name="edited" value="RVNFTjtERVNLVE9QLUsxVDY3NlI7MjAyMy0xMS0wNTsiMDY6MDU6NTYgIjsxOzI2MzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Velocidade, Limite" type="Integer" array="False" size=""/>
+            <input variable="Velocidade"/>
+            <input variable="Limite"/>
+            <if expression="Velocidade &lt;= Limite">
+                <then>
+                    <output expression="&quot;Cumpridor&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Infrator&quot;" newline="True"/>
+                    <if expression="Velocidade &gt; Limite and Velocidade &lt; Limite + 20">
+                        <then>
+                            <output expression="&quot;Multa de 120 euros&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="Velocidade &gt; Limite + 20 and Velocidade &lt;Limite + 30">
+                                <then>
+                                    <output expression="&quot;Multa de 250 euros&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Multa de 500 euros&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
